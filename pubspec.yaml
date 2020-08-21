@@ -21,14 +21,10 @@ dependencies:
   built_collection: ^4.3.2
   built_value: ^7.1.0
   json_serializable: ^3.4.0
-  dartrofit:
-    path: /home/xianxueliang/IdeaProjects/dartrofit/dartrofit
-  dartrofit_adapter_rx:
-    path: /home/xianxueliang/IdeaProjects/dartrofit/dartrofit_adapters/adapter_rx
-  dartrofit_converter_xml:
-    path: /home/xianxueliang/IdeaProjects/dartrofit/dartrofit_converters/converter_xml
-  dartrofit_converter_json:
-    path: /home/xianxueliang/IdeaProjects/dartrofit/dartrofit_converters/converter_json
+  dartrofit: ^1.0.0
+  dartrofit_adapter_rx: ^1.0.0
+  dartrofit_converter_xml: ^1.0.0
+  dartrofit_converter_json: ^1.0.0
 
 
 dev_dependencies:
@@ -36,8 +32,7 @@ dev_dependencies:
     sdk: flutter
   build_runner: ^1.10.2
   built_value_generator: ^7.1.0
-  dartrofit_generator:
-    path: /home/xianxueliang/IdeaProjects/dartrofit/dartrofit_generator
+  dartrofit_generator: ^1.0.0
 
 flutter:
 

@@ -186,38 +186,38 @@ packages:
   dartrofit:
     dependency: "direct main"
     description:
-      path: "/home/xianxueliang/IdeaProjects/dartrofit/dartrofit"
-      relative: false
-    source: path
-    version: "1.0.0-alpha01"
+      name: dartrofit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   dartrofit_adapter_rx:
     dependency: "direct main"
     description:
-      path: "/home/xianxueliang/IdeaProjects/dartrofit/dartrofit_adapters/adapter_rx"
-      relative: false
-    source: path
-    version: "1.0.0-alpha01"
+      name: dartrofit_adapter_rx
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   dartrofit_converter_json:
     dependency: "direct main"
     description:
-      path: "/home/xianxueliang/IdeaProjects/dartrofit/dartrofit_converters/converter_json"
-      relative: false
-    source: path
-    version: "1.0.0-alpha01"
+      name: dartrofit_converter_json
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   dartrofit_converter_xml:
     dependency: "direct main"
     description:
-      path: "/home/xianxueliang/IdeaProjects/dartrofit/dartrofit_converters/converter_xml"
-      relative: false
-    source: path
-    version: "1.0.0-alpha01"
+      name: dartrofit_converter_xml
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   dartrofit_generator:
     dependency: "direct dev"
     description:
-      path: "/home/xianxueliang/IdeaProjects/dartrofit/dartrofit_generator"
-      relative: false
-    source: path
-    version: "1.0.0-alpha01"
+      name: dartrofit_generator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -514,7 +514,7 @@ packages:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.23.1"
+    version: "0.24.1"
   shelf:
     dependency: transitive
     description:
@@ -645,7 +645,7 @@ packages:
       name: xml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.7.0"
+    version: "4.4.1"
   yaml:
     dependency: transitive
     description:

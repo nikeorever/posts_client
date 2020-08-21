@@ -54,6 +54,8 @@ abstract class NikeoTheme {
 
   ThemeData get themeData;
 
+  Animation<Color> get progressIndicatorValueColor;
+
   DrawerHeaderThemeData get drawerHeaderThemeData;
 }
 
@@ -86,6 +88,9 @@ class NikeoLightTheme extends NikeoTheme {
               fontWeight: FontWeight.w400, fontSize: 14),
         ),
       );
+
+  @override
+  Animation<Color> get progressIndicatorValueColor => AlwaysStoppedAnimation(Colors.black54);
 
   @override
   DrawerHeaderThemeData get drawerHeaderThemeData => DrawerHeaderThemeData(
@@ -124,6 +129,9 @@ class NikeoDartTheme extends NikeoTheme {
               fontWeight: FontWeight.w500, fontSize: 20, color: Colors.white),
           subtitle1: GoogleFonts.merriweatherSans(
               fontWeight: FontWeight.w400, fontSize: 14)));
+
+  @override
+  Animation<Color> get progressIndicatorValueColor => AlwaysStoppedAnimation(Colors.teal);
 
   @override
   DrawerHeaderThemeData get drawerHeaderThemeData => DrawerHeaderThemeData(

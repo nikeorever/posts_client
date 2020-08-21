@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:posts_client/common/LoadState.dart';
+import 'package:posts_client/common/theme.dart';
+import 'package:posts_client/models/nikeo_theme_model.dart';
+import 'package:provider/provider.dart';
 
 abstract class LoadingRetryErrorPageState<T extends StatefulWidget>
     extends State<T> with SingleTickerProviderStateMixin {
@@ -52,7 +55,12 @@ abstract class LoadingRetryErrorPageState<T extends StatefulWidget>
               padding: const EdgeInsets.all(8),
               child: AnimatedBuilder(
                 animation: _animation,
-                builder: (context, _) => CircularProgressIndicator(),
+                builder: (context, _) => CircularProgressIndicator(
+                  valueColor: context
+                      .watch<NikeoThemeModel>()
+                      .theme
+                      .progressIndicatorValueColor,
+                ),
               ),
             ),
           ),

@@ -11,16 +11,16 @@ abstract class Api {
   factory Api(Dartrofit dartrofit) = _$Api;
 
   @GET('posts-api/v1/categories')
-  CancelableOperation<Response<Map<String, dynamic>>> getCategories(
+  Future<Map<String, dynamic>> getCategories(
       @Query('enable', encoded: true) bool enable);
 
   @GET('posts-api/v1/posts')
-  CancelableOperation<Response<Map<String, dynamic>>> getPosts(
+  Future<Map<String, dynamic>> getPosts(
     @Query('category_id', encoded: true) int categoryId,
     @Query('order', encoded: true) Order order,
     @Query('enable', encoded: true) bool enable,
   );
 
   @GET()
-  CancelableOperation<ResponseBody> getContent(@url String relativeUrl);
+  Future<ResponseBody> getContent(@url String relativeUrl);
 }

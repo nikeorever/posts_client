@@ -18,18 +18,14 @@ class _$Api extends Api {
   final Dartrofit dartrofit;
 
   @override
-  CancelableOperation<Response<Map<String, dynamic>>> getCategories(
-      bool enable) {
-    final ptv0 = ParameterizedTypeValue('async', 'CancelableOperation',
-        'CancelableOperation<Response<Map<String, dynamic>>>');
-    final ptv1 = ParameterizedTypeValue(
-        'dartrofit', 'Response', 'Response<Map<String, dynamic>>');
-    ptv0.upperBoundAtIndex0 = ptv1;
-    final ptv2 =
+  Future<Map<String, dynamic>> getCategories(bool enable) {
+    final ptv0 = ParameterizedTypeValue(
+        'dart.async', 'Future', 'Future<Map<String, dynamic>>');
+    final ptv1 =
         ParameterizedTypeValue('dart.core', 'Map', 'Map<String, dynamic>');
-    ptv1.upperBoundAtIndex0 = ptv2;
-    final tv3 = TypeValue('dart.core', 'String', 'String');
-    ptv2.upperBoundAtIndex0 = tv3;
+    ptv0.upperBoundAtIndex0 = ptv1;
+    final tv2 = TypeValue('dart.core', 'String', 'String');
+    ptv1.upperBoundAtIndex0 = tv2;
 
     final annotationInfo = AnnotationInfo((b) => b
       ..httpMethod = 'GET'
@@ -42,24 +38,21 @@ class _$Api extends Api {
     final args = [enable];
 
     return dartrofit
-        .parseAnnotation<Map<String, dynamic>,
-            CancelableOperation<Response<Map<String, dynamic>>>>(annotationInfo)
+        .parseAnnotation<Map<String, dynamic>, Future<Map<String, dynamic>>>(
+            annotationInfo)
         .invoke(args);
   }
 
   @override
-  CancelableOperation<Response<Map<String, dynamic>>> getPosts(
+  Future<Map<String, dynamic>> getPosts(
       int categoryId, Order order, bool enable) {
-    final ptv0 = ParameterizedTypeValue('async', 'CancelableOperation',
-        'CancelableOperation<Response<Map<String, dynamic>>>');
-    final ptv1 = ParameterizedTypeValue(
-        'dartrofit', 'Response', 'Response<Map<String, dynamic>>');
-    ptv0.upperBoundAtIndex0 = ptv1;
-    final ptv2 =
+    final ptv0 = ParameterizedTypeValue(
+        'dart.async', 'Future', 'Future<Map<String, dynamic>>');
+    final ptv1 =
         ParameterizedTypeValue('dart.core', 'Map', 'Map<String, dynamic>');
-    ptv1.upperBoundAtIndex0 = ptv2;
-    final tv3 = TypeValue('dart.core', 'String', 'String');
-    ptv2.upperBoundAtIndex0 = tv3;
+    ptv0.upperBoundAtIndex0 = ptv1;
+    final tv2 = TypeValue('dart.core', 'String', 'String');
+    ptv1.upperBoundAtIndex0 = tv2;
 
     final annotationInfo = AnnotationInfo((b) => b
       ..httpMethod = 'GET'
@@ -76,15 +69,15 @@ class _$Api extends Api {
     final args = [categoryId, order, enable];
 
     return dartrofit
-        .parseAnnotation<Map<String, dynamic>,
-            CancelableOperation<Response<Map<String, dynamic>>>>(annotationInfo)
+        .parseAnnotation<Map<String, dynamic>, Future<Map<String, dynamic>>>(
+            annotationInfo)
         .invoke(args);
   }
 
   @override
-  CancelableOperation<ResponseBody> getContent(String relativeUrl) {
-    final ptv0 = ParameterizedTypeValue(
-        'async', 'CancelableOperation', 'CancelableOperation<ResponseBody>');
+  Future<ResponseBody> getContent(String relativeUrl) {
+    final ptv0 =
+        ParameterizedTypeValue('dart.async', 'Future', 'Future<ResponseBody>');
     final tv1 = TypeValue('dartrofit', 'ResponseBody', 'ResponseBody');
     ptv0.upperBoundAtIndex0 = tv1;
 
@@ -99,8 +92,7 @@ class _$Api extends Api {
     final args = [relativeUrl];
 
     return dartrofit
-        .parseAnnotation<ResponseBody, CancelableOperation<ResponseBody>>(
-            annotationInfo)
+        .parseAnnotation<ResponseBody, Future<ResponseBody>>(annotationInfo)
         .invoke(args);
   }
 }

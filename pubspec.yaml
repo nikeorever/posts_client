@@ -4,7 +4,7 @@ repository: https://github.com/nikeorever/posts_client
 
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -25,7 +25,7 @@ dependencies:
   dartrofit_adapter_rx: ^1.0.0
   dartrofit_converter_xml: ^1.0.0
   dartrofit_converter_json: ^1.0.0
-
+  timeconsuming_page_builder: ^1.0.0
 
 dev_dependencies:
   flutter_test:

@@ -20,7 +20,7 @@ class MyPosts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TimeConsumingPage(
+    return TimeConsumingPageBuilder(
         futureBuilder: () => Api(dartrofit).getCategories(true),
         waitingWidgetBuilder: (BuildContext context) => BuiltInWaitingWidget(
               progressIndicatorValueColor: (BuildContext context) => context
@@ -74,7 +74,7 @@ class MyPosts extends StatelessWidget {
   }
 
   Widget _postsWidget(Category category) {
-    return TimeConsumingPage(
+    return TimeConsumingPageBuilder(
         futureBuilder: () =>
             Api(dartrofit).getPosts(category.id, Order.DESC, true),
         waitingWidgetBuilder: (BuildContext context) => BuiltInWaitingWidget(

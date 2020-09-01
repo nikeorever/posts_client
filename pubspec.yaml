@@ -25,7 +25,7 @@ dependencies:
   dartrofit_adapter_rx: ^1.0.0
   dartrofit_converter_xml: ^1.0.0
   dartrofit_converter_json: ^1.0.0
-  timeconsuming_page_builder: ^1.0.0
+  timeconsuming_page_builder: ^1.1.0
 
 dev_dependencies:
   flutter_test:

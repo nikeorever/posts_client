@@ -27,7 +27,7 @@ class MyReading extends StatelessWidget {
           style: Theme.of(context).textTheme.headline1,
         ),
       ),
-      body: TimeConsumingPage<ResponseBody>(
+      body: TimeConsumingPageBuilder<ResponseBody>(
           futureBuilder: () => Api(dartrofit).getContent(post.path),
           waitingWidgetBuilder: (BuildContext context) => BuiltInWaitingWidget(
                 progressIndicatorValueColor: (BuildContext context) => context

@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:ui' as ui
+    show
+        ParagraphStyle,
+        TextStyle,
+        StrutStyle,
+        lerpDouble,
+        Shadow,
+        FontFeature,
+        TextHeightBehavior;
 
 /// NAME       SIZE   WEIGHT   SPACING  2018 NAME
 /// display4   112.0  thin     0.0      headline1
@@ -151,22 +160,62 @@ class NikeoDartTheme extends NikeoTheme {
       );
 }
 
+TextStyle notoSansSC(
+        {Color color,
+        Color backgroundColor,
+        double fontSize,
+        FontWeight fontWeight,
+        FontStyle fontStyle,
+        double letterSpacing,
+        double wordSpacing,
+        TextBaseline textBaseline,
+        double height,
+        Locale locale,
+        Paint foreground,
+        Paint background,
+        List<ui.Shadow> shadows,
+        List<ui.FontFeature> fontFeatures,
+        TextDecoration decoration,
+        Color decorationColor,
+        TextDecorationStyle decorationStyle,
+        double decorationThickness}) =>
+    TextStyle(
+        fontFamily: 'NotoSansSC',
+        color: color,
+        backgroundColor: backgroundColor,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        fontStyle: fontStyle,
+        letterSpacing: letterSpacing,
+        wordSpacing: wordSpacing,
+        textBaseline: textBaseline,
+        height: height,
+        locale: locale,
+        foreground: foreground,
+        background: background,
+        shadows: shadows,
+        fontFeatures: fontFeatures,
+        decoration: decoration,
+        decorationColor: decorationColor,
+        decorationStyle: decorationStyle,
+        decorationThickness: decorationThickness);
+
 MarkdownStyleSheet markdownStyleSheet(BuildContext context) {
   return MarkdownStyleSheet(
-    a: GoogleFonts.merriweatherSans(
+    a: notoSansSC(
       // [google](http://www.google.com)
       decoration: TextDecoration.underline,
       color: Color.fromARGB(255, 12, 147, 228),
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    p: GoogleFonts.merriweatherSans(
+    p: notoSansSC(
       // normal text
       color: Color.fromARGB(255, 70, 70, 70),
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    code: GoogleFonts.merriweatherSans(
+    code: notoSansSC(
       // `Dart`,
       // ```dart
       // void main() {}
@@ -181,79 +230,79 @@ MarkdownStyleSheet markdownStyleSheet(BuildContext context) {
       color: Color.fromRGBO(230, 230, 230, 1),
       borderRadius: BorderRadius.circular(2.0),
     ),
-    h1: GoogleFonts.merriweatherSans(
+    h1: notoSansSC(
       // # h1
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 24,
     ),
-    h2: GoogleFonts.merriweatherSans(
+    h2: notoSansSC(
       // ## h2
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 20,
     ),
-    h3: GoogleFonts.merriweatherSans(
+    h3: notoSansSC(
       // ### h3
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 16,
     ),
-    h4: GoogleFonts.merriweatherSans(
+    h4: notoSansSC(
       // #### h4
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    h5: GoogleFonts.merriweatherSans(
+    h5: notoSansSC(
       // ##### h5
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    h6: GoogleFonts.merriweatherSans(
+    h6: notoSansSC(
       // ###### h6
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    em: GoogleFonts.merriweatherSans(
+    em: notoSansSC(
       // *I*
       fontStyle: FontStyle.italic,
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    strong: GoogleFonts.merriweatherSans(
+    strong: notoSansSC(
       // **B**
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    del: GoogleFonts.merriweatherSans(
+    del: notoSansSC(
       // ~~D~~
       color: Color.fromRGBO(0, 0, 0, 0.75),
       decoration: TextDecoration.lineThrough,
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    img: GoogleFonts.merriweatherSans(
+    img: notoSansSC(
       color: Color.fromRGBO(0, 0, 0, 0.5),
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    checkbox: GoogleFonts.merriweatherSans(
+    checkbox: notoSansSC(
       color: Theme.of(context).primaryColor,
       decoration: TextDecoration.lineThrough,
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    tableHead: GoogleFonts.merriweatherSans(
+    tableHead: notoSansSC(
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    tableBody: GoogleFonts.merriweatherSans(
+    tableBody: notoSansSC(
       // normal text
       color: Color.fromARGB(255, 70, 70, 70),
       fontWeight: FontWeight.normal,
@@ -267,7 +316,7 @@ MarkdownStyleSheet markdownStyleSheet(BuildContext context) {
     tableColumnWidth: const FlexColumnWidth(),
     tableCellsPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
     tableCellsDecoration: const BoxDecoration(),
-    blockquote: GoogleFonts.merriweatherSans(
+    blockquote: notoSansSC(
       // > This is blockquote
       color: Color.fromRGBO(0, 0, 0, 0.5),
       fontWeight: FontWeight.normal,
@@ -278,18 +327,16 @@ MarkdownStyleSheet markdownStyleSheet(BuildContext context) {
     blockquoteAlign: WrapAlignment.start,
     blockSpacing: 8.0,
     listIndent: 24.0,
-    listBullet: GoogleFonts.merriweatherSans(
+    listBullet: notoSansSC(
       /*
-
-                        * Item
-                          1. First Subitem
-                          2. Second Subitem
-                        * Item
-                          - Subitem
-                          - Subitem
-                        * Item
-
-                         */
+        * Item
+          1. First Subitem
+          2. Second Subitem
+        * Item
+          - Subitem
+          - Subitem
+        * Item
+      */
       color: Color.fromARGB(255, 70, 70, 70),
       fontWeight: FontWeight.bold,
       fontSize: 14,

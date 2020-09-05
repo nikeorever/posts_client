@@ -40,3 +40,20 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/nikeo.jpeg
+  fonts:
+    - family: NotoSansSC
+      fonts:
+        - asset: assets/fonts/Noto_Sans_SC/NotoSansSC-Black.otf
+          weight: 900
+        - asset: assets/fonts/Noto_Sans_SC/NotoSansSC-Bold.otf
+          weight: 700
+        - asset: assets/fonts/Noto_Sans_SC/NotoSansSC-Light.otf
+          weight: 300
+        - asset: assets/fonts/Noto_Sans_SC/NotoSansSC-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Noto_Sans_SC/NotoSansSC-Regular.otf
+          weight: 400
+          style: normal
+        - asset: assets/fonts/Noto_Sans_SC/NotoSansSC-Thin.otf
+          weight: 100
+

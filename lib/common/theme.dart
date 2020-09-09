@@ -160,7 +160,7 @@ class NikeoDartTheme extends NikeoTheme {
       );
 }
 
-TextStyle notoSansSC(
+TextStyle markdownFont(
         {Color color,
         Color backgroundColor,
         double fontSize,
@@ -179,8 +179,7 @@ TextStyle notoSansSC(
         Color decorationColor,
         TextDecorationStyle decorationStyle,
         double decorationThickness}) =>
-    TextStyle(
-        fontFamily: 'NotoSansSC',
+    GoogleFonts.merriweatherSans(
         color: color,
         backgroundColor: backgroundColor,
         fontSize: fontSize,
@@ -202,109 +201,109 @@ TextStyle notoSansSC(
 
 MarkdownStyleSheet markdownStyleSheet(BuildContext context) {
   return MarkdownStyleSheet(
-    a: notoSansSC(
+    a: markdownFont(
       // [google](http://www.google.com)
       decoration: TextDecoration.underline,
       color: Color.fromARGB(255, 12, 147, 228),
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    p: notoSansSC(
+    p: markdownFont(
       // normal text
-      color: Color.fromARGB(255, 70, 70, 70),
+      color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    code: notoSansSC(
+    code: markdownFont(
       // `Dart`,
       // ```dart
       // void main() {}
       // ```
-      backgroundColor: Color.fromRGBO(230, 230, 230, 1),
-      color: Color.fromARGB(255, 70, 70, 70),
-      fontWeight: FontWeight.normal,
+      backgroundColor: Color.fromRGBO(238, 238, 238, 1),
+      color: Color.fromRGBO(0, 0, 0, 0.75),
+      fontWeight: FontWeight.w300,
       fontSize: 14,
     ),
     codeblockPadding: EdgeInsets.all(8),
     codeblockDecoration: BoxDecoration(
-      color: Color.fromRGBO(230, 230, 230, 1),
-      borderRadius: BorderRadius.circular(2.0),
+      color: Color.fromRGBO(238, 238, 238, 1),
+      borderRadius: BorderRadius.circular(4.0),
     ),
-    h1: notoSansSC(
+    h1: markdownFont(
       // # h1
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 24,
     ),
-    h2: notoSansSC(
+    h2: markdownFont(
       // ## h2
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 20,
     ),
-    h3: notoSansSC(
+    h3: markdownFont(
       // ### h3
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 16,
     ),
-    h4: notoSansSC(
+    h4: markdownFont(
       // #### h4
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    h5: notoSansSC(
+    h5: markdownFont(
       // ##### h5
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    h6: notoSansSC(
+    h6: markdownFont(
       // ###### h6
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    em: notoSansSC(
+    em: markdownFont(
       // *I*
       fontStyle: FontStyle.italic,
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    strong: notoSansSC(
+    strong: markdownFont(
       // **B**
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    del: notoSansSC(
+    del: markdownFont(
       // ~~D~~
       color: Color.fromRGBO(0, 0, 0, 0.75),
       decoration: TextDecoration.lineThrough,
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    img: notoSansSC(
+    img: markdownFont(
       color: Color.fromRGBO(0, 0, 0, 0.5),
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    checkbox: notoSansSC(
+    checkbox: markdownFont(
       color: Theme.of(context).primaryColor,
       decoration: TextDecoration.lineThrough,
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
-    tableHead: notoSansSC(
+    tableHead: markdownFont(
       color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     ),
-    tableBody: notoSansSC(
+    tableBody: markdownFont(
       // normal text
-      color: Color.fromARGB(255, 70, 70, 70),
+      color: Color.fromRGBO(0, 0, 0, 0.75),
       fontWeight: FontWeight.normal,
       fontSize: 14,
     ),
@@ -316,7 +315,7 @@ MarkdownStyleSheet markdownStyleSheet(BuildContext context) {
     tableColumnWidth: const FlexColumnWidth(),
     tableCellsPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
     tableCellsDecoration: const BoxDecoration(),
-    blockquote: notoSansSC(
+    blockquote: markdownFont(
       // > This is blockquote
       color: Color.fromRGBO(0, 0, 0, 0.5),
       fontWeight: FontWeight.normal,
@@ -327,7 +326,7 @@ MarkdownStyleSheet markdownStyleSheet(BuildContext context) {
     blockquoteAlign: WrapAlignment.start,
     blockSpacing: 8.0,
     listIndent: 24.0,
-    listBullet: notoSansSC(
+    listBullet: markdownFont(
       /*
         * Item
           1. First Subitem
@@ -337,9 +336,9 @@ MarkdownStyleSheet markdownStyleSheet(BuildContext context) {
           - Subitem
         * Item
       */
-      color: Color.fromARGB(255, 70, 70, 70),
+      color: Colors.black87,
       fontWeight: FontWeight.bold,
-      fontSize: 14,
+      fontSize: 13,
     ),
     horizontalRuleDecoration: BoxDecoration(
       // >---

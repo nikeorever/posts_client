@@ -33,7 +33,7 @@ class MyPosts extends StatelessWidget {
         dataWidgetBuilder: (BuildContext context, Map<String, dynamic> json) {
           final categories = BaseResponse<Category>.fromJson(json).data;
           if (categories.isNullOrEmpty) {
-            return BuiltInEmptyWidget();
+            return BuiltInEmptyWidget(emptyText: 'No data yet',);
           }
 
           return DefaultTabController(
@@ -88,7 +88,7 @@ class MyPosts extends StatelessWidget {
         dataWidgetBuilder: (BuildContext context, Map<String, dynamic> json) {
           final posts = BaseResponse<Post>.fromJson(json).data;
           if (posts.isNullOrEmpty) {
-            return BuiltInEmptyWidget();
+            return BuiltInEmptyWidget(emptyText: 'No data yet',);
           }
           return ListView.builder(
               controller: controller,

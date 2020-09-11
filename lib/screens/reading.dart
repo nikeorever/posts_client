@@ -45,7 +45,7 @@ class MyReading extends StatelessWidget {
               BuiltInErrorWidget(onRetryClick: caller),
           dataWidgetBuilder: (BuildContext context, ResponseBody body) {
             if (body.string.orEmpty().isEmpty) {
-              return BuiltInEmptyWidget();
+              return BuiltInEmptyWidget(emptyText: 'No data yet',);
             }
 
             final markdownData = '''
